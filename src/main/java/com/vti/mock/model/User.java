@@ -38,6 +38,7 @@ public class User {
     @Column(name = "img", length = 800)
     private String img;
 
-//    @OneToMany
-//    private List<Contribute> contributed;
+    @OneToMany(mappedBy = "user")
+    List<Contribute> contributes;
+
 }
