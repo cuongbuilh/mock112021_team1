@@ -9,5 +9,9 @@ import java.util.List;
 
 public interface IUserService {
     List<User> getAll();
-    List<User> getByName();
+    List<User> getByName(String name);
+    User getByEmail(String email);
+    User getByUsername(String username);
+    User getByPhoneNumber(String phoneNumber);
+
 }

@@ -35,7 +35,7 @@ public class User {
     @Column(name = "phone", length = 16, unique = true, nullable = true)
     private String phone;
 
-    @Column(name = "img", length = 800)
+    @Column(name = "image", length = 800)
     private String img;
 
     @OneToMany(mappedBy = "user")
