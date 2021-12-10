@@ -33,10 +33,10 @@ public class Program {
     @Column(name = "receiver", length = 256, nullable = false)
     private String receiver;
 
-    @Column(name = "fullname")
+    @Column(name = "currentAmount")
     private BigDecimal currentAmount;
 
-    @Column(name = "fullname")
+    @Column(name = "totalAmount")
     private BigDecimal totalAmount;
 
     @Column(name = "startDate")
