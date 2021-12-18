@@ -1,10 +1,8 @@
 package com.vti.mock.service;
 
-import com.vti.mock.form.CreateUserForm;
-import com.vti.mock.form.UpdateUserForm;
+import com.vti.mock.form.user.CreateUserForm;
+import com.vti.mock.form.user.UpdateUserForm;
 import com.vti.mock.model.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

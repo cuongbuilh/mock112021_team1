@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "contribute", catalog = "mock_t11")
+@Table(name = "donate", catalog = "mock_t11")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Contribute {
+public class Donate {
     @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

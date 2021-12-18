@@ -1,26 +1,17 @@
 package com.vti.mock.controller;
 
-
-import com.vti.mock.dto.UserDto;
-import com.vti.mock.form.user.CreateUserForm;
-import com.vti.mock.form.user.UpdateUserForm;
-import com.vti.mock.model.User;
 import com.vti.mock.service.IDonateService;
 import com.vti.mock.service.IImagesService;
 import com.vti.mock.service.IProgramService;
 import com.vti.mock.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
 @CrossOrigin
-@RequestMapping("api/v1/users")
-public class UserController {
+@RequestMapping("api/v1/donates")
+public class DonateController {
     @Autowired
     private IUserService iUserService;
 
@@ -34,22 +25,28 @@ public class UserController {
     private IDonateService donateService;
 
     @GetMapping()
-    public void getAll() {
+    public ResponseEntity getAll() {
+        return null;
     }
 
     @GetMapping("/{id}")
-    public void get(@PathVariable("id") String id) {
+    public ResponseEntity get(@PathVariable("id") String id) {
+        return null;
     }
 
     @PostMapping()
-    public void create() {
+    public ResponseEntity create() {
+        return null;
     }
 
     @PutMapping()
-    public void update() {
+    public ResponseEntity update() {
+        return null;
     }
 
     @DeleteMapping()
-    public void delete() {
+    public ResponseEntity delete() {
+        return null;
     }
+
 }
