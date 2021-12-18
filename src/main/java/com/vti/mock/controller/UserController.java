@@ -34,19 +34,23 @@ public class UserController {
     private IDonateService donateService;
 
     @GetMapping()
-    public void getAll() {
+    public ResponseEntity<List<UserDto>> getAll() {
+        return null;
     }
 
     @GetMapping("/{id}")
-    public void get(@PathVariable("id") String id) {
+    public ResponseEntity<List<UserDto>> get(@PathVariable("id") String id) {
+        return null;
     }
 
     @PostMapping()
-    public void create() {
+    public ResponseEntity<UserDto> create() {
+        return null;
     }
 
     @PutMapping()
-    public void update() {
+    public ResponseEntity<UserDto> update() {
+        return null;
     }
 
     @DeleteMapping()

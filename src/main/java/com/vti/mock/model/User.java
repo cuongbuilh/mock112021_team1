@@ -35,8 +35,8 @@ public class User {
     @Column(name = "phone", length = 16, unique = true, nullable = true)
     private String phone;
 
-    @Column(name = "image", length = 800)
-    private String img;
+    @Column(name = "avatar", length = 800)
+    private String avatar;
 
     @OneToMany(mappedBy = "user")
     List<Donate> contributes;
