@@ -1,9 +1,9 @@
-package com.vti.mock.form;
+package com.vti.mock.form.user;
 
 import lombok.Data;
 
 @Data
-public class UpdateUserForm {
+public class CreateUserForm {
     private String fullname;
     private String username;
     private String email;

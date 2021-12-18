@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -27,8 +26,8 @@ public class Program {
     @Column(name = "content", nullable = false,length = 3600)
     private String content;
 
-    @Column(name = "img", length = 800, nullable = false)
-    private String img;
+    @Column(name = "avatar", length = 800, nullable = false)
+    private String avatar;
 
     @Column(name = "receiver", length = 256, nullable = false)
     private String receiver;
@@ -49,5 +48,8 @@ public class Program {
     private String status;
 
     @OneToMany(mappedBy = "program")
-    List<Contribute> contributes;
+    List<Donate> contributes;
+
+    @OneToMany(mappedBy = "program")
+    List<Images> images;
 }

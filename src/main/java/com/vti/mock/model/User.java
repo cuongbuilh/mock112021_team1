@@ -39,6 +39,6 @@ public class User {
     private String img;
 
     @OneToMany(mappedBy = "user")
-    List<Contribute> contributes;
+    List<Donate> contributes;
 
 }
