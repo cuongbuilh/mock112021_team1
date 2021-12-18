@@ -14,7 +14,7 @@ public class UserDto {
     private String username;
     private String email;
     private String phone;
-    private String img;
+    private String avatar;
 
     public UserDto(User user){
         this.id = user.getId();
@@ -22,6 +22,6 @@ public class UserDto {
         this.username = user.getUsername();
         this.email = user.getEmail();
         this.phone = user.getPhone();
-        this.img = user.getImg();
+        this.avatar = user.getAvatar();
     }
 }

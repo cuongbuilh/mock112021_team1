@@ -1,5 +1,6 @@
 package com.vti.mock.controller;
 
+import com.vti.mock.dto.DonateDto;
 import com.vti.mock.service.IDonateService;
 import com.vti.mock.service.IImagesService;
 import com.vti.mock.service.IProgramService;
@@ -7,6 +8,8 @@ import com.vti.mock.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -25,27 +28,27 @@ public class DonateController {
     private IDonateService donateService;
 
     @GetMapping()
-    public ResponseEntity getAll() {
+    public ResponseEntity<List<DonateDto>> getAll() {
         return null;
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity get(@PathVariable("id") String id) {
+    public ResponseEntity<DonateDto> get(@PathVariable("id") String id) {
         return null;
     }
 
     @PostMapping()
-    public ResponseEntity create() {
+    public ResponseEntity<DonateDto> create() {
         return null;
     }
 
     @PutMapping()
-    public ResponseEntity update() {
+    public ResponseEntity<DonateDto> update() {
         return null;
     }
 
     @DeleteMapping()
-    public ResponseEntity delete() {
+    public ResponseEntity<String> delete() {
         return null;
     }
 
