@@ -10,6 +10,7 @@ import com.vti.mock.service.IImagesService;
 import com.vti.mock.service.IProgramService;
 import com.vti.mock.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.NumberFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -44,16 +45,16 @@ public class UserController {
     }
 
     @PostMapping()
-    public ResponseEntity<UserDto> create() {
+    public ResponseEntity<UserDto> create(@RequestBody CreateUserForm form) {
         return null;
     }
 
-    @PutMapping()
-    public ResponseEntity<UserDto> update() {
+    @PutMapping("/{id}")
+    public ResponseEntity<UserDto> update(@RequestParam("id") @NumberFormat int id, @RequestBody UpdateUserForm form) {
         return null;
     }
 
-    @DeleteMapping()
+    @DeleteMapping("/{id}")
     public void delete() {
     }
 }
