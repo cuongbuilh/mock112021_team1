@@ -24,6 +24,7 @@ public class ProgramDto {
     private LocalDate endDate;
     private String status;
     private List<DonateDto> donates;
+    private String headingImg;
     private List<String> images;
 
     public ProgramDto(Program program){
@@ -36,6 +37,7 @@ public class ProgramDto {
         this.startDate = program.getStartDate();
         this.endDate = program.getEndDate();
         this.status = program.getStatus();
+        headingImg = program.getHeadingImg();
 
         this.donates = new ArrayList<>();
         program.getDonates().forEach(donate -> {

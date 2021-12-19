@@ -20,9 +20,19 @@ public class UpdateProgramForm {
     private LocalDate startDate;
     private LocalDate endDate;
     private String status;
+    private String headingImg;
 
     public Program toProgram() {
-
-        return new Program();
+        Program program = new Program();
+        program.setTitle(title);
+        program.setContent(content);
+        program.setReceiver(receiver);
+        program.setCurrentAmount(currentAmount);
+        program.setTotalAmount(totalAmount);
+        program.setStartDate(startDate);
+        program.setEndDate(endDate);
+        program.setStatus(status);
+        program.setHeadingImg(headingImg);
+        return program;
     }
 }

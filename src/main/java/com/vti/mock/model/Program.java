@@ -41,6 +41,9 @@ public class Program {
     @Column(name = "endDate")
     private LocalDate endDate;
 
+    @Column(name = "headingImg", length = 800)
+    private String headingImg;
+
     @Column(name = "status", length = 24, nullable = false)
     private String status;
 
