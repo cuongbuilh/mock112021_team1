@@ -36,25 +36,31 @@ public class UserController {
 
     @GetMapping()
     public ResponseEntity<List<UserDto>> getAll() {
-        return null;
+        List<UserDto> userDtos = new ArrayList<>();
+        iUserService.getAll().forEach(user -> {
+            userDtos.add(new UserDto(user));
+        });
+        return new ResponseEntity(userDtos, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<List<UserDto>> get(@PathVariable("id") String id) {
-        return null;
+    public ResponseEntity<List<UserDto>> get(@PathVariable("id") @NumberFormat int id) {
+        return new ResponseEntity(new UserDto(iUserService.getById(id)),HttpStatus.OK);
     }
 
     @PostMapping()
     public ResponseEntity<UserDto> create(@RequestBody CreateUserForm form) {
-        return null;
+        return new ResponseEntity(new UserDto( iUserService.createUser(form)) , HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<UserDto> update(@RequestParam("id") @NumberFormat int id, @RequestBody UpdateUserForm form) {
-        return null;
+        return new ResponseEntity(new UserDto(iUserService.updateUser(id, form)), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public void delete() {
+    @ResponseStatus(HttpStatus.OK)
+    public void delete(@PathVariable("id") @NumberFormat int id) {
+        iUserService.deleteUser(id);
     }
 }

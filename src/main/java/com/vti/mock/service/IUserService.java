@@ -10,12 +10,12 @@ import java.util.List;
 public interface IUserService {
     List<User> getAll();
     List<User> getByName(String name);
+    User getById(int id);
     User getByEmail(String email);
     User getByUsername(String username);
     User getByPhoneNumber(String phoneNumber);
 
-    void createUser(CreateUserForm form);
-    void deleteUser(String id);
-
-    void updateUser(String id, UpdateUserForm form);
+    User createUser(CreateUserForm form);
+    void deleteUser(int id);
+    User updateUser(int id, UpdateUserForm form);
 }
